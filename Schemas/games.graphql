@@ -1,0 +1,8 @@
+  type Game {
+    title: String
+    Date: String
+  }
+
+  type Query {
+    games: [Game]
+  }
