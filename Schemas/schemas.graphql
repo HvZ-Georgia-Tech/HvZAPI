@@ -1,0 +1,35 @@
+    type GameWeek {
+        Name: String
+        humans: [Player]
+        zombies: [Player]
+        missions: [Mission]
+
+    }
+
+    type Mission {
+        id: ID!
+        Name: String
+        Desc: String
+        players: [Player!]!
+    }
+
+    type Player {
+        id: ID!
+        gt_user: String!
+        first_name: String
+        last_name: String
+        admin_access: Boolean
+        achievements: [Achievement]
+        game_weeks: [GameWeek]
+    }
+
+    type Achievement {
+        id: ID!
+        name: String
+        desc: String
+    }
+
+
+    type Query {
+        games: [Game]
+    }
